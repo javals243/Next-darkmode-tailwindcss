@@ -1,6 +1,6 @@
 {
-  "name": "starter-next",
-  "version": "0.1.0",
+  "name": "softhustler-website",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@types/react-toastify": "^4.1.0",
+    "flowbite": "^1.5.2",
     "next": "12.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.4.0",
     "react-toastify": "^9.0.8"
   },
   "devDependencies": {

@@ -1,10 +1,14 @@
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { ThemeProvider } from "../ThemeContext/ThemeContext";
+
 const Layout = ({ children }: any) => {
   return (
     <>
-      {children}
-      <ToastContainer autoClose={3000} />
+      <ThemeProvider>
+        {children}
+        <ToastContainer autoClose={3000} />
+      </ThemeProvider>
     </>
   );
 };

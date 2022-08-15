@@ -2,13 +2,126 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
+
 * {
   box-sizing: border-box;
 }
+
 
 html,
 body {
     padding: 0;
     margin: 0;
     font-family: 'Roboto Slab', serif;
+}
+.dark {
+  --color-bg-primary: #2d3748;
+  --color-bg-secondary: #283141;
+  --color-text-primary: #f7fafc;
+  --color-text-secondary: #e2e8f0;
+  --color-text-accent: #81e6d9;
+}
+
+.light {
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #edf2f7;
+  --color-text-primary: #2d3748;
+  --color-text-secondary: #4a5568;
+  --color-text-accent: #2b6cb0;
+}
+
+body {
+  @apply antialiased bg-primary;
+}
+
+h1 {
+  @apply font-bold text-primary text-xl;
+}
+
+p {
+  @apply text-secondary;
+}
+
+a {
+  @apply text-secondary font-semibold;
+}
+
+a:hover {
+  @apply text-accent;
+}
+
+
+
+.customTransition{
+  transition: background 0.3s border 0.3s border-radius 0.3s box-shadow 0.3s;
+    padding: 200px 0px 190px 0px;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    border-radius: unset;
+}
+.CustomLogo{
+  height: 100vh;
+  width: 100vh;
+  position: absolute;
+  right: 0;
+  top: 40%;
+  transform: translate(5%, -50%);
+  fill:transparent;
+  animation:svg-fill 3s ease-in-out forwards infinite;
+}
+@keyframes svg-fill {
+     50% {
+        opacity: .8;
+    }
+    100%{
+      opacity: 1;
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    .CustomLogo {
+      width: 100%;
+       transform: translate(22%, -50%);
+    }
+    .customTransition{
+      padding: 300px 0px 190px 0px;
+    }
+  }
+
+.logoImg{
+  height: 100px;
+  width: 200px;
+}
+.CustomParagraph {
+  @apply py-5 font-[400] text-[18px]  leading-[30px];
+};
+.CustomH3{
+  @apply font-[400] text-[36px] leading-[48px] text-[#091133]
+
+}
+.btn-primary {
+  @apply text-center flex justify-center items-center px-10 py-1 rounded  text-[#111B47] border border-[#111B47] bg-white;
+}
+.btn-secondary {
+  @apply px-14 text-center flex justify-center items-center  py-1 rounded  text-white bg-[#111B47] hover:bg-white  hover:text-[#111B47] border;
+}
+.customPadding {
+  @apply py-8;
+}
+.scrollToTop{
+    display: none ;
+    position: fixed ;
+    bottom: 20px;
+    right: 30px; 
+    z-index: 99;
+    border: none; 
+    outline: none; 
+    background-color: #458B75; 
+    color: white;
+    cursor: pointer; 
+    padding: 15px 15px; 
+    border-radius: 100%; 
+    font-size: 18px; 
 }
